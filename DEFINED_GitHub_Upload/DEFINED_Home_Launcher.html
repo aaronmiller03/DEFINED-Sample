@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DEFINED Creative Tools</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--orange:#E65A23;--ink:#111;--muted:#737373;--line:#e8e4df;--paper:#f4f1ec;--white:#fff;--r-sm:12px;--r-md:20px;--r-lg:30px;--shadow:0 20px 60px rgba(28,20,14,.10)}
+*{box-sizing:border-box;margin:0;padding:0}body{min-height:100vh;background:var(--paper);color:var(--ink);font-family:Inter,sans-serif}.shell{min-height:100vh;display:grid;grid-template-columns:minmax(330px,42%) 1fr}.brand-panel{position:relative;overflow:hidden;min-height:100vh;padding:44px;display:flex;flex-direction:column;justify-content:space-between;color:#fff;background:radial-gradient(circle at 12% 18%,rgba(230,90,35,.38),transparent 31%),radial-gradient(circle at 92% 75%,rgba(255,255,255,.08),transparent 28%),linear-gradient(145deg,#26221f 0%,#111 52%,#070707 100%)}.brand-panel:after{content:"";position:absolute;width:440px;height:440px;border:1px solid rgba(255,255,255,.08);border-radius:50%;right:-210px;bottom:-150px;box-shadow:0 0 0 70px rgba(255,255,255,.025),0 0 0 140px rgba(255,255,255,.018)}.lockup,.brand-copy,.brand-foot{position:relative;z-index:1}.wordmark{font:900 31px/1 Inter Tight,sans-serif;letter-spacing:-.055em}.category{margin-top:7px;color:rgba(255,255,255,.46);font-size:10px;font-weight:800;letter-spacing:.2em;text-transform:uppercase}.brand-copy{max-width:520px}.eyebrow{margin-bottom:16px;color:#f3946f;font-size:10px;font-weight:900;letter-spacing:.18em;text-transform:uppercase}.brand-copy h1{font:900 clamp(48px,6vw,84px)/.88 Inter Tight,sans-serif;letter-spacing:-.07em}.brand-copy p{max-width:430px;margin-top:25px;color:rgba(255,255,255,.63);font-size:14px;line-height:1.7}.brand-foot{display:flex;align-items:center;justify-content:space-between;gap:20px;color:rgba(255,255,255,.43);font-size:11px}.plan-chip{padding:8px 11px;border:1px solid rgba(255,255,255,.12);border-radius:999px;color:#fff;font-size:9px;font-weight:900;letter-spacing:.1em;text-transform:uppercase}.studio-panel{padding:44px clamp(24px,5vw,72px);display:flex;flex-direction:column;background:linear-gradient(135deg,rgba(255,255,255,.9),rgba(248,246,242,.75)),repeating-linear-gradient(90deg,transparent 0,transparent 49px,rgba(0,0,0,.015) 50px)}.panel-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:30px}.panel-head h2{font:850 34px/1 Inter Tight,sans-serif;letter-spacing:-.045em}.panel-head p{margin-top:8px;color:var(--muted);font-size:12px}.plan-control label{display:block;margin-bottom:7px;color:#999;font-size:9px;font-weight:900;letter-spacing:.14em;text-transform:uppercase}.plan-control select{min-width:190px;border:1px solid var(--line);border-radius:11px;background:#fff;padding:10px 34px 10px 12px;color:#222;font:700 11px Inter;outline:none;box-shadow:0 5px 18px rgba(0,0,0,.04)}.studio-grid{display:grid;gap:12px}.studio-card{position:relative;overflow:hidden;display:grid;grid-template-columns:1fr auto;align-items:center;gap:22px;min-height:132px;padding:23px 24px;border:1px solid var(--line);border-radius:var(--r-md);background:rgba(255,255,255,.86);box-shadow:0 6px 24px rgba(26,20,15,.045);transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease;animation:rise .55s both}.studio-card:nth-child(2){animation-delay:.06s}.studio-card:nth-child(3){animation-delay:.12s}.studio-card:nth-child(4){animation-delay:.18s}.studio-card:hover{transform:translateY(-2px);border-color:#d7d0c8;box-shadow:var(--shadow)}.studio-card.available:before{content:"";position:absolute;inset:0 auto 0 0;width:4px;background:var(--orange)}.card-kicker{display:flex;align-items:center;gap:8px;margin-bottom:10px}.index{color:#bbb;font-size:9px;font-weight:900;letter-spacing:.12em}.badge{display:inline-flex;align-items:center;min-height:21px;padding:0 8px;border-radius:999px;background:#f1efec;color:#777;font-size:8px;font-weight:900;letter-spacing:.1em;text-transform:uppercase}.badge.lite{background:var(--orange);color:#fff}.badge.included{background:#111;color:#fff}.badge.upgrade{background:#fff1eb;color:#be4617}.studio-card h3{font:850 21px/1.05 Inter Tight,sans-serif;letter-spacing:-.035em}.studio-card .tagline{margin-top:7px;color:#555;font-size:11px;font-weight:650}.studio-card .description{max-width:630px;margin-top:5px;color:#999;font-size:10px;line-height:1.5}.card-actions{display:flex;justify-content:flex-end}.btn{display:inline-flex;align-items:center;justify-content:center;min-width:116px;min-height:42px;padding:0 16px;border:1px solid #ded9d3;border-radius:11px;background:#fff;color:#222;font:800 10px Inter;text-decoration:none;cursor:pointer;transition:.18s ease}.btn:hover{transform:translateY(-1px);border-color:#bbb}.btn.primary{border-color:#111;background:#111;color:#fff}.btn.primary:hover{border-color:var(--orange);background:var(--orange)}.btn.upgrade{border-color:#f0c4b1;color:#be4617}.btn.disabled{cursor:default;opacity:.45}.suite-note{margin-top:auto;padding-top:28px;display:flex;justify-content:space-between;gap:20px;color:#aaa;font-size:9px;letter-spacing:.06em}.modal{position:fixed;inset:0;z-index:20;display:none;place-items:center;padding:20px;background:rgba(0,0,0,.56);backdrop-filter:blur(9px)}.modal.open{display:grid}.modal-card{width:min(460px,100%);overflow:hidden;border-radius:24px;background:#fff;box-shadow:0 35px 100px rgba(0,0,0,.3)}.modal-hero{padding:30px;background:linear-gradient(145deg,#25211e,#0a0a0a);color:#fff}.modal-hero small{color:#f3946f;font-size:9px;font-weight:900;letter-spacing:.16em;text-transform:uppercase}.modal-hero h2{margin-top:10px;font:850 32px/1 Inter Tight;letter-spacing:-.05em}.modal-hero p{margin-top:13px;color:rgba(255,255,255,.6);font-size:12px;line-height:1.65}.modal-body{display:grid;gap:9px;padding:18px}.modal-body .btn{width:100%}@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}@media(max-width:940px){.shell{grid-template-columns:1fr}.brand-panel{min-height:440px;padding:32px}.brand-copy h1{font-size:58px}.studio-panel{padding:32px 24px}.suite-note{margin-top:28px}}@media(max-width:620px){.brand-panel{min-height:390px;padding:25px}.brand-copy h1{font-size:48px}.brand-copy p{font-size:12px}.brand-foot{align-items:flex-end}.panel-head{display:block}.plan-control{margin-top:20px}.plan-control select{width:100%}.studio-card{grid-template-columns:1fr;gap:17px;padding:21px}.card-actions{justify-content:flex-start}.btn{width:100%}}
+</style>
+<link href="DEFINED_Design_System.css" rel="stylesheet">
+</head>
+<body class="defined-launcher-reference">
+<div class="shell">
+  <aside class="brand-panel">
+    <div class="lockup"><div class="wordmark" id="brand-name"></div><div class="category" id="brand-category"></div></div>
+    <div class="brand-copy"><h1 id="brand-tagline"></h1><p id="brand-marketing"></p></div>
+    <div class="brand-foot"><span>One ecosystem. Every Studio, clearly defined.</span><span class="plan-chip">Beta Launcher</span></div>
+  </aside>
+  <main class="studio-panel">
+    <header class="panel-head"><div><h2 id="launcher-heading"></h2><p id="launcher-subheading"></p></div></header>
+    <section class="studio-grid" id="studio-grid"></section>
+    <footer class="suite-note"><span>DEFINED</span><span>Creative production software</span></footer>
+  </main>
+</div>
+<div class="modal" id="upgrade-modal"><div class="modal-card"><div class="modal-hero"><small id="modal-kicker"></small><h2 id="modal-title"></h2><p id="modal-copy"></p></div><div class="modal-body"><button class="btn primary" id="modal-primary"></button><button class="btn" id="modal-close"></button></div></div></div>
+<script src="DEFINED_Config.js"></script>
+<script>
+(function(){
+  const api=window.DEFINED,cfg=api.config;
+  const $=id=>document.getElementById(id);
+  function actionFor(id,state,studio){
+    if(state.state==='available') return `<a class="btn ${state.lite?'':'primary'}" href="${studio.file}?preview=${api.getPlanId()}">Continue Editing</a>`;
+    if(state.state==='purchase') return `<button class="btn upgrade" data-purchase="proposal">${cfg.copy.buttons.purchase}</button>`;
+    return `<button class="btn disabled" disabled>${cfg.copy.badges.comingSoon}</button>`;
+  }
+  function render(){
+    const planId=api.getPlanId();
+    $('brand-name').textContent=cfg.brand.name;$('brand-category').textContent=cfg.brand.category;$('brand-tagline').innerHTML=cfg.brand.taglineHtml||cfg.brand.tagline;$('brand-marketing').textContent=cfg.brand.marketing;
+    $('launcher-heading').textContent=cfg.copy.launcher.heading;$('launcher-subheading').textContent=cfg.copy.launcher.subheading;
+    $('studio-grid').innerHTML=cfg.launcher.order.map((id,index)=>{const studio=cfg.studios[id],state=api.studioState(id);const name=state.lite?studio.liteName:studio.name;const badgeClass=state.lite?'lite':state.state==='available'?'open':state.state==='purchase'?'purchase':'soon';return `<article class="studio-card ${state.state} ${state.lite?'lite':''}"><div><div class="card-kicker"><span class="badge ${badgeClass}">${state.label}</span></div><h3>${name}</h3><div class="tagline">${studio.tagline}</div><div class="description">${studio.description}</div></div><div class="card-actions">${actionFor(id,state,studio)}</div></article>`}).join('');
+    document.querySelectorAll('[data-purchase]').forEach(button=>button.onclick=openPurchase);
+  }
+  function openPurchase(){$('modal-kicker').textContent='DEFINED Proposal Studio';$('modal-title').textContent='Add Proposal Studio.';$('modal-copy').textContent=cfg.copy.upgrade.proposal;$('modal-primary').textContent=cfg.copy.buttons.purchase;$('modal-close').textContent=cfg.copy.buttons.close;$('upgrade-modal').classList.add('open')}
+  function closeModal(){$('upgrade-modal').classList.remove('open')}
+  $('modal-close').onclick=closeModal;$('modal-primary').onclick=closeModal;$('upgrade-modal').onclick=e=>{if(e.target===e.currentTarget)closeModal()};
+  render();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,663 @@
+/*
+ * DEFINED shared design system
+ * Estimate Studio is the canonical product reference.
+ * Studios may define workflow layout, but not visual tokens or shared components.
+ */
+:root {
+  --defined-font-interface: "Inter", sans-serif;
+  --defined-font-brand: "Inter", sans-serif;
+  --defined-type-on-dark: rgba(255, 255, 255, 0.64);
+  --defined-category-on-dark: rgba(255, 255, 255, 0.46);
+  --defined-space-major: 80px;
+  --defined-space-large: 48px;
+  --defined-space-medium: 32px;
+  --defined-space-small: 24px;
+  --defined-space-element: 16px;
+  --defined-space-tight: 8px;
+  --defined-radius-large: 24px;
+  --defined-radius-card: 18px;
+  --defined-radius-button: 14px;
+  --defined-radius-input: 12px;
+  --defined-radius-pill: 999px;
+  --defined-shadow: 0 16px 40px rgba(17, 17, 17, 0.10);
+  --defined-color-accent: #E65A23;
+  --defined-color-ink: #111111;
+  --defined-color-canvas: #f4f1ec;
+  --defined-color-surface: #ffffff;
+  --defined-color-surface-dark: #171717;
+  --defined-color-border: #e8e4df;
+  --defined-color-border-dark: #333333;
+  --defined-color-muted: #737373;
+  --defined-gradient-dark: radial-gradient(circle at 12% 18%, rgba(230, 90, 35, 0.38), transparent 31%), linear-gradient(145deg, #26221f 0%, #111111 52%, #070707 100%);
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  font-family: var(--defined-font-interface);
+}
+
+/* Shared component styling */
+.brand-panel,
+.sidebar,
+.dash-hero,
+.modal-hero,
+.defined-access-gate {
+  background: var(--defined-gradient-dark) !important;
+}
+
+.btn,
+.dash-btn,
+.dash-template,
+.nav-home-btn,
+.cmd-top-btn,
+.launch-card,
+.studio-card,
+.engine-card,
+.modal-card,
+input,
+select,
+textarea {
+  border-style: solid;
+  border-width: 1px;
+}
+
+.btn.primary,
+.studio-card .btn.primary {
+  border-color: var(--defined-color-ink) !important;
+  background: var(--defined-color-ink) !important;
+  color: #ffffff !important;
+}
+
+.btn.accent,
+.dash-btn.primary,
+.badge.lite,
+.lite-badge,
+.defined-access-card a {
+  border-color: var(--defined-color-accent) !important;
+  background: var(--defined-color-accent) !important;
+  color: #ffffff !important;
+}
+
+.studio-card,
+.dash-template,
+.modal-card,
+.launch-card {
+  border-color: var(--defined-color-border) !important;
+  background-color: var(--defined-color-surface) !important;
+}
+
+.sidebar .engine-card,
+.sidebar .option,
+body:not(.editor-dark) .engine-card {
+  border-color: var(--defined-color-border-dark);
+}
+
+input,
+select,
+textarea {
+  border-color: var(--defined-color-border) !important;
+}
+
+.pill,
+.badge,
+.plan-chip,
+.lite-badge {
+  white-space: nowrap;
+}
+
+/* Brand */
+.wordmark,
+.brand h1,
+.brand-wordmark,
+#app > header h1 {
+  font-family: var(--defined-font-brand) !important;
+  font-size: 22px !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.045em !important;
+  line-height: 1 !important;
+  text-transform: none !important;
+}
+
+/* Category labels */
+.category,
+.brand > span,
+.brand-sub,
+.defined-category-label {
+  font-family: var(--defined-font-interface) !important;
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.08em !important;
+  line-height: 1 !important;
+  text-transform: uppercase !important;
+}
+
+.brand > span,
+.brand-sub {
+  text-transform: lowercase !important;
+}
+
+.category,
+.brand > span,
+.brand-sub,
+.brand-panel .defined-category-label,
+.dash-hero .defined-category-label {
+  color: var(--defined-category-on-dark) !important;
+}
+
+/* Hero headlines */
+.brand-copy h1,
+.hero h2,
+.dash-title,
+.cps-launch .dash-title,
+.defined-access-card h1 {
+  font-family: var(--defined-font-interface) !important;
+  font-size: 58px !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.045em !important;
+  line-height: 1 !important;
+}
+
+/* Body copy on dark hero surfaces */
+.brand-copy p,
+.hero p,
+.dash-copy,
+.cps-launch .dash-copy,
+.defined-access-card p {
+  font-family: var(--defined-font-interface) !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  line-height: 1.7 !important;
+  color: var(--defined-type-on-dark) !important;
+}
+
+/* Estimate Studio keeps the shared hero family with a calmer workflow introduction. */
+body.defined-estimate-studio .hero h2 {
+  font-family: var(--defined-font-interface) !important;
+  font-size: 29px !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.045em !important;
+  line-height: 1 !important;
+}
+
+/* Section titles */
+.panel-head h2,
+.head h3,
+.defined-section-title {
+  font-family: var(--defined-font-interface) !important;
+  font-size: 22px !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.045em !important;
+  line-height: 1 !important;
+}
+
+/* Modal hierarchy from the canonical launcher. */
+.modal-hero small {
+  font-family: var(--defined-font-interface) !important;
+  font-size: 10px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.14em !important;
+  text-transform: uppercase !important;
+  color: rgba(255, 255, 255, 0.45) !important;
+}
+
+.modal-hero h2 {
+  font-family: var(--defined-font-interface) !important;
+  font-size: 32px !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.045em !important;
+  line-height: 1 !important;
+}
+
+.modal-hero p {
+  font-family: var(--defined-font-interface) !important;
+  font-size: 13px !important;
+  font-weight: 400 !important;
+  line-height: 1.6 !important;
+  color: rgba(255, 255, 255, 0.64) !important;
+}
+
+/* Card titles */
+.studio-card h3,
+.engine-card h4,
+.launch-text strong,
+.defined-card-title {
+  font-family: var(--defined-font-interface) !important;
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.045em !important;
+  line-height: 1 !important;
+}
+
+/* Card copy */
+.studio-card .tagline,
+.studio-card .description,
+.engine-card header p,
+.launch-text small,
+.dash-template span,
+.defined-description {
+  font-family: var(--defined-font-interface) !important;
+  font-size: 12px !important;
+  font-weight: 400 !important;
+  line-height: 1.55 !important;
+}
+
+/* Buttons */
+.btn,
+.dash-btn,
+.dash-template,
+.nav-home-btn,
+.cmd-top-btn,
+.launch-card,
+.defined-access-card a,
+button.defined-button {
+  font-family: var(--defined-font-interface) !important;
+  font-size: 12px !important;
+  font-weight: 800 !important;
+}
+
+/* Badges */
+.badge,
+.lite-badge,
+.pill,
+.plan-chip,
+.launch-badge,
+.defined-badge {
+  font-family: var(--defined-font-interface) !important;
+  font-size: 9px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+}
+
+/* Navigation */
+.step,
+.defined-navigation {
+  font-family: var(--defined-font-interface) !important;
+  font-size: 12px !important;
+  font-weight: 800 !important;
+}
+
+@media (max-width: 700px) {
+  .brand-copy h1,
+  .hero h2,
+  .dash-title,
+  .cps-launch .dash-title,
+  .defined-access-card h1 {
+    font-size: 46px !important;
+  }
+}
+
+/* Spacing system */
+.brand-panel,
+.studio-panel,
+.dash-hero,
+.dash-side {
+  padding: var(--defined-space-large) !important;
+}
+
+.workspace,
+.modal-hero,
+.defined-access-card {
+  padding: var(--defined-space-medium) !important;
+}
+
+.panel-head,
+.head,
+.dash-actions {
+  margin-bottom: var(--defined-space-medium) !important;
+}
+
+.studio-grid,
+.modal-body,
+.dash-action-group,
+.dash-template-grid,
+.review-actions,
+.ratecard-controls {
+  gap: var(--defined-space-element) !important;
+}
+
+.studio-card,
+.launch-card {
+  gap: var(--defined-space-element) !important;
+}
+
+.studio-card,
+.engine-card,
+.launch-card,
+.dash-template,
+.modal-body {
+  padding: var(--defined-space-small) !important;
+}
+
+.brand-copy p,
+.hero p,
+.studio-card .tagline,
+.studio-card .description,
+.engine-card header p,
+.launch-text small {
+  margin-top: var(--defined-space-tight) !important;
+}
+
+/* Radius system */
+.modal-card,
+.dash-modal,
+.defined-access-card,
+.quote-card {
+  border-radius: var(--defined-radius-large) !important;
+}
+
+.studio-card,
+.engine-card,
+.launch-card,
+.dash-template,
+.notice,
+.option,
+.custom-preset-panel {
+  border-radius: var(--defined-radius-card) !important;
+}
+
+button,
+.btn,
+.dash-btn,
+.nav-home-btn,
+.cmd-top-btn,
+.defined-access-card a {
+  border-radius: var(--defined-radius-button) !important;
+}
+
+input,
+select,
+textarea,
+.f input,
+.f select,
+.f textarea {
+  border-radius: var(--defined-radius-input) !important;
+}
+
+.badge,
+.lite-badge,
+.pill,
+.plan-chip,
+.launch-badge,
+#save-pill {
+  border-radius: var(--defined-radius-pill) !important;
+}
+
+/* One elevation system: all legacy shadows are removed first. */
+body *,
+body *::before,
+body *::after {
+  box-shadow: none !important;
+}
+
+.studio-card,
+.engine-card,
+.launch-card,
+.dash-template,
+.modal-card,
+.dash-modal,
+.defined-access-card,
+.quote-card,
+.custom-preset-panel {
+  box-shadow: var(--defined-shadow) !important;
+}
+
+@media (max-width: 700px) {
+  .brand-panel,
+  .studio-panel,
+  .dash-hero,
+  .dash-side,
+  .workspace {
+    padding: var(--defined-space-small) !important;
+  }
+}
+
+/*
+ * Locked launcher hero reference:
+ * DEFINED_Home_Launcher_v1.2.html owns the launcher mood and proportions.
+ * Keep this scoped so Studio typography and component rules still inherit normally.
+ */
+.defined-launcher-reference .shell {
+  grid-template-columns: 1fr 1.05fr !important;
+}
+
+.defined-launcher-reference .brand-panel {
+  padding: 46px !important;
+  background:
+    radial-gradient(circle at 14% 12%, rgba(230, 90, 35, 0.34), transparent 30%),
+    radial-gradient(circle at 80% 82%, rgba(230, 90, 35, 0.16), transparent 34%),
+    linear-gradient(140deg, #17100f, #0b0b0b 58%, #050505) !important;
+}
+
+.defined-launcher-reference .brand-panel::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px) !important;
+  background-size: 44px 44px !important;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.75), transparent 82%) !important;
+  pointer-events: none !important;
+  box-shadow: none !important;
+}
+
+.defined-launcher-reference .brand-panel::after {
+  display: none !important;
+}
+
+.defined-launcher-reference .wordmark {
+  font-family: "Inter", sans-serif !important;
+  font-size: 22px !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.045em !important;
+  line-height: 1 !important;
+  color: #ffffff !important;
+}
+
+.defined-launcher-reference .category {
+  margin-top: 3px !important;
+  font-family: "Inter", sans-serif !important;
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.08em !important;
+  line-height: normal !important;
+  text-transform: lowercase !important;
+  color: rgba(255, 255, 255, 0.46) !important;
+}
+
+.defined-launcher-reference .eyebrow {
+  display: none !important;
+}
+
+.defined-launcher-reference .brand-copy {
+  max-width: 520px !important;
+}
+
+.defined-launcher-reference .brand-copy h1 {
+  max-width: 520px !important;
+  font-family: "Inter", sans-serif !important;
+  font-size: 58px !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.045em !important;
+  line-height: 1 !important;
+}
+
+.defined-launcher-reference .brand-copy p {
+  max-width: 440px !important;
+  margin-top: 20px !important;
+  font-family: "Inter", sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  line-height: 1.7 !important;
+  color: rgba(255, 255, 255, 0.64) !important;
+}
+
+/* The launcher keeps the compact editorial card composition from v1.2. */
+.defined-launcher-reference .studio-panel {
+  padding: 34px !important;
+  gap: 22px !important;
+  background: #fbfbf8 !important;
+}
+
+.defined-launcher-reference .panel-head {
+  align-items: flex-start !important;
+  margin-bottom: 4px !important;
+}
+
+.defined-launcher-reference .panel-head h2 {
+  font-size: 22px !important;
+  line-height: 1 !important;
+  letter-spacing: -0.045em !important;
+  font-weight: 800 !important;
+}
+
+.defined-launcher-reference .panel-head p {
+  margin-top: 7px !important;
+  font-size: 12px !important;
+  line-height: 1.55 !important;
+}
+
+.defined-launcher-reference .studio-grid {
+  gap: 14px !important;
+}
+
+.defined-launcher-reference .studio-card {
+  min-height: 0 !important;
+  padding: 18px !important;
+  gap: 18px !important;
+  border-radius: 22px !important;
+  border-color: #e6e2d9 !important;
+  background: #ffffff !important;
+  box-shadow: var(--defined-shadow) !important;
+}
+
+.defined-launcher-reference .studio-card::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 auto 0 0 !important;
+  display: block !important;
+  width: 5px !important;
+  background: #111111 !important;
+}
+
+.defined-launcher-reference .studio-card.available::before { background: #1f8f5f !important; }
+.defined-launcher-reference .studio-card.lite::before { background: #c73b36 !important; }
+.defined-launcher-reference .studio-card.purchase::before { background: var(--defined-color-accent) !important; }
+.defined-launcher-reference .studio-card.coming_soon::before { background: #c7c1b8 !important; }
+
+.defined-launcher-reference .studio-card.purchase {
+  border-color: #f0cbb9 !important;
+  background: linear-gradient(180deg, #fff8f3 0%, #ffffff 100%) !important;
+}
+
+.defined-launcher-reference .studio-card.coming_soon {
+  background: #f7f5ef !important;
+  box-shadow: none !important;
+}
+
+.defined-launcher-reference .card-kicker { margin-bottom: 8px !important; }
+.defined-launcher-reference .studio-card h3 {
+  font-family: "Inter", sans-serif !important;
+  font-size: 20px !important;
+  line-height: 1 !important;
+  letter-spacing: -0.045em !important;
+  font-weight: 800 !important;
+}
+.defined-launcher-reference .studio-card .tagline {
+  margin-top: 7px !important;
+  font-size: 12px !important;
+  line-height: 1.55 !important;
+  font-weight: 400 !important;
+  color: #777777 !important;
+}
+.defined-launcher-reference .studio-card .description {
+  margin-top: 3px !important;
+  font-size: 12px !important;
+  line-height: 1.55 !important;
+  font-weight: 400 !important;
+  opacity: 1 !important;
+  color: #777777 !important;
+}
+
+.defined-launcher-reference .badge {
+  min-height: 0 !important;
+  padding: 4px 8px !important;
+  font-size: 9px !important;
+  letter-spacing: 0.08em !important;
+}
+.defined-launcher-reference .badge.lite { border-color: #c73b36 !important; background: #c73b36 !important; color: #ffffff !important; }
+.defined-launcher-reference .badge.open { border-color: #1f8f5f !important; background: #1f8f5f !important; color: #ffffff !important; }
+.defined-launcher-reference .badge.purchase { border-color: var(--defined-color-accent) !important; background: var(--defined-color-accent) !important; color: #ffffff !important; }
+.defined-launcher-reference .badge.soon { border-color: #e2ddd3 !important; background: #eee9df !important; color: #7a746b !important; }
+
+.defined-launcher-reference .btn {
+  min-width: 92px !important;
+  min-height: 0 !important;
+  padding: 10px 13px !important;
+  border-radius: 12px !important;
+  font-size: 12px !important;
+  font-weight: 800 !important;
+}
+
+/* Proposal Studio v75.37 owns its home-screen composition. */
+.cps-launch .dash-modal {
+  grid-template-columns: 0.88fr 1.12fr !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+.cps-launch .dash-hero {
+  padding: 44px 38px !important;
+  background: transparent !important;
+}
+.cps-launch .dash-title {
+  font-family: "Inter", sans-serif !important;
+  font-size: 58px !important;
+  line-height: 1 !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.045em !important;
+}
+.cps-launch .dash-copy {
+  font-size: 14px !important;
+  line-height: 1.7 !important;
+  color: rgba(255, 255, 255, 0.64) !important;
+}
+.cps-launch .dash-actions { margin: 26px 0 0 !important; }
+.cps-launch .dash-side {
+  padding: 22px !important;
+  gap: 13px !important;
+  border-radius: 26px !important;
+  border-color: #333333 !important;
+  background: #181818 !important;
+  color: #eeeeee !important;
+}
+.cps-launch .launch-card {
+  padding: 18px !important;
+  gap: 14px !important;
+  border-radius: 20px !important;
+  border-color: #333333 !important;
+  background: #202020 !important;
+  color: #eeeeee !important;
+}
+.cps-launch .launch-card.recommended {
+  border-color: #4a2c21 !important;
+  background: linear-gradient(135deg, #241914, #1d1d1d) !important;
+}
+.cps-launch .launch-card.example {
+  border-color: #4a2c21 !important;
+  background: linear-gradient(135deg, #241914, #1d1d1d) !important;
+}
+.cps-launch .launch-text strong { color: #ffffff !important; }
+.cps-launch .launch-text small { color: #aaaaaa !important; opacity: 1 !important; }
+.cps-launch .launch-links button { color: #888888 !important; }
+.cps-launch .launch-links button:hover { background: #2a2a2a !important; color: #ffffff !important; }
+
+@media (max-width: 860px) {
+  .cps-launch .dash-modal { grid-template-columns: 1fr !important; }
+  .cps-launch .dash-hero { padding: 28px 20px 8px !important; }
+  .cps-launch .dash-title { font-size: 46px !important; }
+  .cps-launch .dash-side { margin: 0 18px 24px !important; }
+}
